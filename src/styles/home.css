@@ -1,0 +1,8 @@
+.scrollpersonaje {
+    max-height: 63vh;
+    padding: 0;
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    flex-direction: column;
+}
