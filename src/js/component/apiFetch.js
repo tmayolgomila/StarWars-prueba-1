@@ -1,48 +1,52 @@
-export const getPersonaje =async() =>{
+export const getPersonaje =() =>{
     try{
         return fetch("https://www.swapi.tech/api/people", {
             method: "GET",
             
         })
         .then(response => response.json())
-        .then(response=> response.results);
-    }catch(error){
+        .then(respuesta=> respuesta.results);
+    }catch (error){
+        console.error(err);
         return[];
     }
 };
 
-export const getDetallesPersonajes = async id => {
+export const getDetallesPersonajes =  id => {
     try{
         return fetch(`https://www.swapi.tech/api/people/${id}`, {
             method: "GET"
         })
         .then(response => response.json())
-        .then(response => response.result);
+        .then(respuesta => respuesta.result);
     }catch(error){
+        console.error(err);
         return {};
     }
 };
-export const getPlaneta =async() =>{
+export const getPlaneta =() =>{
     try{
         return fetch("https://www.swapi.tech/api/planets", {
             method: "GET",
             redirect: "follow"
         })
         .then(response => response.json())
-        .then(response=> response.results);
+        .then(respuesta=> respuesta.results);
     }catch(error){
+        console.error(err);
         return[];
     }
 };
 
-export const getDetallesPlanetas = async id => {
+export const getDetallesPlanetas =  id => {
     try{
         return fetch(`https://www.swapi.tech/api/planets/${id}`, {
             method: "GET"
         })
         .then(response => response.json())
-        .then(response => response.result);
+        .then(respuesta => respuesta.result);
     }catch(error){
+        console.error(err);
         return {};
     }
 };

@@ -7,7 +7,7 @@ import { Home } from "./views/home";
 
 import injectContext from "./store/appContext";
 import { DetallesPersonajes } from "./views/detallesPersonajes.js";
-
+import { DetallesPlanetas } from "./views/detallesPlanetas";
 import { Navbar } from "./component/navbar";
 
 import { Footer } from "./component/footer";
@@ -31,7 +31,9 @@ const Layout = () => {
 						<Route exact path="/detallesPersonajes/:id">
 							<DetallesPersonajes />
 						</Route>
-					
+						<Route exact path="/detallesPlanetas/:id">
+							<DetallesPlanetas />
+						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>
